@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customize Pizza - Pizza of Your Choice</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="brand">
+
+        <img src="logo.png" alt="Pizza Logo">
+
+        <h1>Pizza of Your Choice</h1>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="login.html">Login</a>
+
+        <a href="customize.html">Customize Pizza</a>
+
+        <a href="aboutus.html">About Us</a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- CUSTOMIZE PAGE -->
+
+<section class="customize-page">
+
+
+    <!-- LEFT SIDE -->
+
+    <div class="customize-form">
+
+        <h2>Customize Your Pizza</h2>
+
+        <p class="subtitle">
+            Build your dream pizza step by step.
+        </p>
+
+
+
+        <!-- BASE -->
+
+        <h3>
+            <span>1</span>
+            Choose Your Base
+        </h3>
+
+
+        <div class="options">
+
+            <label>
+                <input type="radio"
+                       name="base"
+                       value="Regular Crust"
+                       data-price="0"
+                       checked
+                       onchange="updatePizza()">
+
+                Regular
+            </label>
+
+
+            <label>
+                <input type="radio"
+                       name="base"
+                       value="Thin Crust"
+                       data-price="30"
+                       onchange="updatePizza()">
+
+                Thin Crust
+            </label>
+
+
+            <label>
+                <input type="radio"
+                       name="base"
+                       value="Cheese Burst"
+                       data-price="60"
+                       onchange="updatePizza()">
+
+                Cheese Burst
+            </label>
+
+
+            <label>
+                <input type="radio"
+                       name="base"
+                       value="Gluten Free"
+                       data-price="50"
+                       onchange="updatePizza()">
+
+                Gluten Free
+            </label>
+
+        </div>
+
+
+
+        <!-- SAUCE -->
+
+        <h3>
+            <span>2</span>
+            Choose Your Sauce
+        </h3>
+
+
+        <div class="options">
+
+            <label>
+                <input type="radio"
+                       name="sauce"
+                       value="Tomato Sauce"
+                       data-price="0"
+                       checked
+                       onchange="updatePizza()">
+
+                Tomato
+            </label>
+
+
+            <label>
+                <input type="radio"
+                       name="sauce"
+                       value="Cheese Sauce"
+                       data-price="20"
+                       onchange="updatePizza()">
+
+                Cheese
+            </label>
+
+
+            <label>
+                <input type="radio"
+                       name="sauce"
+                       value="Pesto Sauce"
+                       data-price="30"
+                       onchange="updatePizza()">
+
+                Pesto
+            </label>
+
+
+            <label>
+                <input type="radio"
+                       name="sauce"
+                       value="BBQ Sauce"
+                       data-price="25"
+                       onchange="updatePizza()">
+
+                BBQ
+            </label>
+
+        </div>
+
+
+
+        <!-- TOPPINGS -->
+
+        <h3>
+
+            <span>3</span>
+
+            Add Toppings
+
+            <small>
+                (Choose as many as you like)
+            </small>
+
+        </h3>
+
+
+        <div class="toppings">
+
+            <label>
+                <input type="checkbox"
+                       value="Onion"
+                       data-price="20"
+                       onchange="updatePizza()">
+
+                Onion
+            </label>
+
+
+            <label>
+                <input type="checkbox"
+                       value="Capsicum"
+                       data-price="20"
+                       onchange="updatePizza()">
+
+                Capsicum
+            </label>
+
+
+            <label>
+                <input type="checkbox"
+                       value="Tomato"
+                       data-price="20"
+                       onchange="updatePizza()">
+
+                Tomato
+            </label>
+
+
+            <label>
+                <input type="checkbox"
+                       value="Olives"
+                       data-price="25"
+                       onchange="updatePizza()">
+
+                Olives
+            </label>
+
+
+            <label>
+                <input type="checkbox"
+                       value="Corn"
+                       data-price="20"
+                       onchange="updatePizza()">
+
+                Corn
+            </label>
+
+
+            <label>
+                <input type="checkbox"
+                       value="Mushroom"
+                       data-price="25"
+                       onchange="updatePizza()">
+
+                Mushroom
+            </label>
+
+
+            <label>
+                <input type="checkbox"
+                       value="Jalapeno"
+                       data-price="20"
+                       onchange="updatePizza()">
+
+                Jalapeno
+            </label>
+
+
+            <label>
+                <input type="checkbox"
+                       value="Paneer"
+                       data-price="30"
+                       onchange="updatePizza()">
+
+                Paneer
+            </label>
+
+
+            <label>
+                <input type="checkbox"
+                       value="Pineapple"
+                       data-price="20"
+                       onchange="updatePizza()">
+
+                Pineapple
+            </label>
+
+
+            <label>
+                <input type="checkbox"
+                       value="Extra Cheese"
+                       data-price="40"
+                       onchange="updatePizza()">
+
+                Extra Cheese
+            </label>
+
+        </div>
+
+
+
+        <!-- EXTRAS -->
+
+        <h3>
+
+            <span>4</span>
+
+            Add Extras
+
+        </h3>
+
+
+        <div class="extras">
+
+            <label>
+                <input type="checkbox"
+                       value="Extra Cheese"
+                       data-price="40"
+                       onchange="updatePizza()">
+
+                Extra Cheese
+            </label>
+
+
+            <label>
+                <input type="checkbox"
+                       value="Cheese Dip"
+                       data-price="30"
+                       onchange="updatePizza()">
+
+                Cheese Dip
+            </label>
+
+
+            <label>
+                <input type="checkbox"
+                       value="Garlic Bread"
+                       data-price="80"
+                       onchange="updatePizza()">
+
+                Garlic Bread
+            </label>
+
+
+            <label>
+                <input type="checkbox"
+                       value="Cold Drink"
+                       data-price="50"
+                       onchange="updatePizza()">
+
+                Cold Drink
+            </label>
+
+        </div>
+
+
+
+        <!-- BUTTONS -->
+
+        <div class="customize-buttons">
+
+            <button type="button"
+                    class="cart-btn"
+                    onclick="orderPlaced()">
+
+                Order
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+            </button>
+
+
+            <button type="button"
+                    class="reset-btn"
+                    onclick="resetPizza()">
+
+                Reset
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- RIGHT SIDE -->
+
+    <div class="pizza-preview">
+
+        <h2>Your Pizza</h2>
+
+
+        <img src="customizepizza.png.png"
+             alt="Your Pizza"
+             class="preview-pizza">
+
+
+        <div class="pizza-info">
+
+
+            <p>
+
+                <b>Base:</b>
+
+                <span id="show-base">
+                    Regular Crust
+                </span>
+
+            </p>
+
+
+            <p>
+
+                <b>Sauce:</b>
+
+                <span id="show-sauce">
+                    Tomato Sauce
+                </span>
+
+            </p>
+
+
+            <p>
+
+                <b>Toppings:</b>
+
+                <span id="show-toppings">
+                    None
+                </span>
+
+            </p>
+
+
+            <p>
+
+                <b>Extras:</b>
+
+                <span id="show-extras">
+                    None
+                </span>
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- TOTAL -->
+
+        <div class="total">
+
+            Total:
+
+            ₹<span id="total-price">199</span>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Pizza of Your Choice | Fresh • Tasty • Custom Made
+    </p>
+
+</footer>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+
+/* Starting pizza price */
+
+let basePrice = 199;
+
+
+
+function updatePizza() {
+
+
+    let total = basePrice;
+
+
+
+    /* =====================
+       BASE
+       ===================== */
+
+    let selectedBase =
+        document.querySelector(
+            'input[name="base"]:checked'
+        );
+
+
+    document.getElementById("show-base").innerText =
+        selectedBase.value;
+
+
+    total += Number(selectedBase.dataset.price);
+
+
+
+    /* =====================
+       SAUCE
+       ===================== */
+
+    let selectedSauce =
+        document.querySelector(
+            'input[name="sauce"]:checked'
+        );
+
+
+    document.getElementById("show-sauce").innerText =
+        selectedSauce.value;
+
+
+    total += Number(selectedSauce.dataset.price);
+
+
+
+    /* =====================
+       TOPPINGS
+       ===================== */
+
+    let toppings =
+        document.querySelectorAll(
+            '.toppings input[type="checkbox"]:checked'
+        );
+
+
+    let toppingNames = [];
+
+
+    toppings.forEach(function(topping) {
+
+        toppingNames.push(topping.value);
+
+        total += Number(topping.dataset.price);
+
+    });
+
+
+    if (toppingNames.length === 0) {
+
+        document.getElementById("show-toppings").innerText =
+            "None";
+
+    } else {
+
+        document.getElementById("show-toppings").innerText =
+            toppingNames.join(", ");
+
+    }
+
+
+
+    /* =====================
+       EXTRAS
+       ===================== */
+
+    let extras =
+        document.querySelectorAll(
+            '.extras input[type="checkbox"]:checked'
+        );
+
+
+    let extraNames = [];
+
+
+    extras.forEach(function(extra) {
+
+        extraNames.push(extra.value);
+
+        total += Number(extra.dataset.price);
+
+    });
+
+
+    if (extraNames.length === 0) {
+
+        document.getElementById("show-extras").innerText =
+            "None";
+
+    } else {
+
+        document.getElementById("show-extras").innerText =
+            extraNames.join(", ");
+
+    }
+
+
+
+    /* =====================
+       SHOW TOTAL
+       ===================== */
+
+    document.getElementById("total-price").innerText =
+        total;
+
+}
+
+
+
+/* =========================
+   RESET
+   ========================= */
+
+function resetPizza() {
+
+
+    document.querySelector(
+        'input[name="base"][value="Regular Crust"]'
+    ).checked = true;
+
+
+    document.querySelector(
+        'input[name="sauce"][value="Tomato Sauce"]'
+    ).checked = true;
+
+
+    let checkboxes =
+        document.querySelectorAll(
+            'input[type="checkbox"]'
+        );
+
+
+    checkboxes.forEach(function(checkbox) {
+
+        checkbox.checked = false;
+
+    });
+
+
+    updatePizza();
+
+}
+
+
+
+/* =========================
+   ORDER
+   ========================= */
+
+function orderPlaced() {
+
+    alert("Order has been placed successfully!");
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>

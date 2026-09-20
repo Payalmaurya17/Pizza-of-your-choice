@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Pizza of Your Choice</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="brand">
+
+            <img src="logo.png" alt="Pizza Logo">
+
+            <h1>Pizza of Your Choice</h1>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="login.html">Login</a>
+
+            <a href="customize.html">Customize Pizza</a>
+
+            <a href="aboutus.html">About Us</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- LOGIN PAGE -->
+
+    <section class="login-page">
+
+
+        <!-- LOGIN FORM -->
+
+        <div class="login-box">
+
+
+            <div class="login-icon">
+
+                <i class="fa-solid fa-pizza-slice"></i>
+
+            </div>
+
+
+            <h2>Welcome Back!</h2>
+
+
+            <p class="login-text">
+
+                Login to continue and enjoy your favorite pizza.
+
+            </p>
+
+
+
+            <form>
+
+
+                <!-- EMAIL -->
+
+                <div class="input-box">
+
+                    <i class="fa-regular fa-envelope"></i>
+
+                    <input type="email"
+                           placeholder="Enter Email"
+                           required>
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input type="password"
+                           placeholder="Enter Password"
+                           required>
+
+                </div>
+
+
+
+                <!-- REMEMBER ME -->
+
+                <div class="remember">
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        Remember Me
+
+                    </label>
+
+
+                    <a href="#">Forgot Password?</a>
+
+                </div>
+
+
+
+                <!-- LOGIN BUTTON -->
+
+                <input type="button"
+                       value="Login"
+                       class="login-btn"
+                       onclick="loginSuccess()">
+
+
+            </form>
+
+
+
+            <p class="signup">
+
+                Don't have an account?
+
+                <a href="#">Sign Up</a>
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function loginSuccess() {
+
+            alert("Login Successfully!");
+
+            window.location.href = "customize.html";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
